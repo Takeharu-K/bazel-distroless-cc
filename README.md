@@ -1,0 +1,5 @@
+Bazelでビルドしたバイナリをdistrolessにコピーして実行するまで
+
+grc.io/distroless/cc を使用した
+
+軽量な実行コンテナが獲得できた
