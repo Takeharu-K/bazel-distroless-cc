@@ -4,6 +4,7 @@ WORKDIR /app
 RUN bazel build ... && \
     cp ./bazel-bin/hello /hello 
 
-FROM gcr.io/distroless/cc as runner
+FROM gcr.io/distroless/cc:debug as runner
+# FROM ubuntu:latest as runner
 COPY --from=builder /hello /hello
 CMD [ "./hello" ]
